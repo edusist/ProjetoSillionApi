@@ -4,6 +4,10 @@
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
+/*Importar o Framework bootstrap 5 */
+import 'bootstrap'; /*Sendo importardo do node_modules*/
+
+
 import axios from 'axios';
 window.axios = axios;
 

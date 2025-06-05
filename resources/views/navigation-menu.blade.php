@@ -54,17 +54,17 @@
                                     @endcan
 
                                     <!-- Team Switcher -->
-                                    @if (Auth::user()->allTeams()->count() > 1)
+                                    {{-- @if (Auth::user()->allTeams()->count() > 1)
                                         <div class="border-t border-gray-200"></div>
 
                                         <div class="block px-4 py-2 text-xs text-gray-400">
                                             {{ __('Switch Teams') }}
                                         </div>
 
-                                        @foreach (Auth::user()->allTeams() as $team)
+                                        {{-- @foreach (Auth::user()->allTeams() as $team)
                                             <x-switchable-team :team="$team" />
-                                        @endforeach
-                                    @endif
+                                        @endforeach --}}
+                                    @endif --}}
                                 </div>
                             </x-slot>
                         </x-dropdown>
