@@ -1,5 +1,5 @@
 
-## Documentação da API lista de Usuários
+# Documentação da API lista de Usuários
 
 <p>Sistema de acesso a API externa https://randomuser.me/api/?results=100 e lista os dados de usuários aleátorios utilizando o Controller e Route e View no Laravel 12</p>
 
