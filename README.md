@@ -11,6 +11,8 @@
     <li>Laragon</li>
     <li>github</li>
     <li>git bash</li>
+    <li>Vscode</li>
+    <li>Composer</li>
 </ul>
 
 ## linguagens
