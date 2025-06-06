@@ -1,5 +1,5 @@
 
-<p>Documentação da API lista Usuários</p>
+## Documentação da API lista Usuários
 
 ## About Laravel
 
