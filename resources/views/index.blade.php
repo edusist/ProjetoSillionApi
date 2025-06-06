@@ -1,97 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 class="text-center text-uppercase">Lista de Usuários</h1>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
+        </li>
+        {{-- <li class="nav-item">
+    <a class="nav-link" href="{{ route('usuarios') }}">Lista de usuários</a></li>
+  </li> --}}
 
-    <div class="table-responsive table-responsive-sm">
-        <table class="table table-striped table-hover">
-            <thead>
-                <tr>
-                    <th scope="col">Genêro</th>
-                    <th scope="col">Título</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Sobrenome</th>
-                    <th scope="col">Logradouro</th>
-                    <th scope="col">Cidade</th>
-                    <th scope="col">UF</th>
-                    <th scope="col">País</th>
-                    <th scope="col">Caixa Postal</th>
-                    <th scope="col">Latitude</th>
-                    <th scope="col">Longitude</th>
-                    <th scope="col">Timezone horário</th>
-                    <th scope="col">Timezone país</th>
-                    <th scope="col">E-mail</th>
-                    <th scope="col">Login</th>
-                </tr>
-            </thead>
+    </ul>
+    <h1 class="text-center">API - Lista de Usuários</h1>
+    <div class="row text-center">
+        <div class="col-sm-12 col-md-4 col-lg-12 col-xl-3 col-xxl-3">
+            <form method="post" action="{{ route('usuarios') }}" enctype="multipart/form-data">
+                {{ csrf_field() }}
 
-                @foreach ($data as $users)
-                    <tr>
-                        <td>
-                            <p>{{ $users['gender'] }} </p>
-                        </td>
-                        <td>
-                            <p>{{ $users['name']['title'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['name']['first'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['name']['last'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['street']['name'] }} Nº {{ $users['location']['street']['number'] }}
-                            </p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['city'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['state'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['country'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['postcode'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['coordinates']['latitude'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['coordinates']['longitude'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['timezone']['offset'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['location']['timezone']['description'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['email'] }}</p>
-                        </td>
-                        <td>
-                            <p>{{ $users['login']['uuid'] }}</p>
-                        </td>
-                    </tr>
-
-            @endforeach
-           {{-- {{ $data->links() }} <!-- Exibe paginação --> --}}
-        </table>
-    @endsection
-          <!-- Pagination -->
-      <nav class="my-4" aria-label="...">
-        <ul class="pagination pagination-circle justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
-            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Próximo</a>
-          </li>
-        </ul>
-      </nav>
+                <button type="submit" class="btn btn-primary">Lista de usuários</button>
+            </form>
+        </div>
+    </div>
+@endsection

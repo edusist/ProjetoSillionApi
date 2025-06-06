@@ -16,22 +16,10 @@ use App\Http\Controllers\{
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('lista-usuarios');
+// });
+Route::get('/', [UserController::class, 'index'])->name("index");
+Route::post('/usuarios', [UserController::class, 'getRandomUsers'])->name("usuarios");
 
-Route::get('/usuarios', [UserController::class, 'getRandomUsers'])->name("usuarios");
 
-// Route::get('/paginas-usuarios', [UserController::class, 'paginasUsuarios']);
-
-Route::get('post',[UserController::class,'post']);
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
