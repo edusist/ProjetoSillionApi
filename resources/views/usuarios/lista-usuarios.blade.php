@@ -1,24 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- <nav class="my-4" aria-label="...">
-        <ul class="pagination pagination-circle justify-content-center">
-          <li class="page-item">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item active" aria-current="page">
-            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Próximo</a>
-          </li>
-        </ul>
-      </nav> --}}
-
     <!-- {{-- /fim da Páginação --}} -->
-    <h1 class="text-center text-uppercase">API de Usuários</h1>
+    <h1 class="text-center text-uppercase">Lista de Usuários</h1>
 
     <div class="table-responsive table-responsive-sm">
         <table class="table table-striped table-hover">
@@ -39,7 +23,6 @@
                     <th scope="col">Data</th>
                     <th scope="col">Telefone Fixo</th>
                     <th scope="col">Telefone Celular</th>
-
                     <th scope="col">Nome</th>
                     <th scope="col">Natural</th>
                     <th scope="col">Logradouro</th>
@@ -63,7 +46,7 @@
                             width="100%">
                         <p></p>
                     </td>
-                     <td>
+                    <td>
                         <p>{{ $users['id']['value'] }}</p>
                     </td>
                     <td>
