@@ -1,31 +1,39 @@
 
 ## Documentação da API lista Usuários
 
-## About Laravel
+<p>Sistema recupera os dados de usuários aleátorios utilizando o Controller e Rotas e View no Laravel e lista na Tela</p>
+
+## 🚀 Tecnologias
+
+-Laravel 12
+-Html5
+-Boostrap 5
+
+## ⚙️ Instalação
 
 
 
+<ol>
+  <li>git clone https://github.com/edusist/ProjetoSillionApi</li>
+  <li>Intalação do Laravel 12</li>
+  <li>composer global require laravel/installer</li>
+  <li>laravel new ProjetoSillionApi</li>
+  <li>cd ProjetoSillionApi</li>
+  <li>npm install && npm run build</li>
+  </li>composer run dev</li>
+  <li>php artisan migrate</li>
+</ol>
 
 
-## Learning Laravel
+
+## Lista os usuários
+<p>Abrir o navegador e colar o link abaixo:</p>
+<p>http://projetosillionapi.test:8080/</p>
+<p>clicar no botão: lista de usuários </p>
+<p>http://projetosillionapi.test:8080/usuarios</p>
+<p>Será exibida a lista com 100 usuários</p>
 
 
-
-### Premium Partners
-
-- 
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
